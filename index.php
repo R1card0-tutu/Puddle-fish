@@ -15,8 +15,8 @@ if(isset($_GET['getaddr'])){
                         echo 'var returnCitySN = {"cip": "'.$addr.'", "extend": "000000"};';
                 }
 }
-if(isset($_GET['bobo'])){
-        setcookie("bobo","bobo", time()+3600*240);
+if(isset($_GET['bite1'])){
+        setcookie("bitecookie","123123", time()+3600*240);
 }
 
 
